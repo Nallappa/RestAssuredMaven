@@ -1,0 +1,134 @@
+{
+	"info": {
+		"_postman_id": "2db894d3-fcaf-4076-bb99-14724e0b9e82",
+		"name": "GoogleMaps",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add_DeletePlace",
+			"item": [
+				{
+					"name": "AddPlace_Json",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"location\":{\r\n        \"lat\" : -38.383494,\r\n        \"lng\" : 33.427362\r\n    },\r\n    \"accuracy\":50,\r\n    \"name\":\"Frontline house\",\r\n    \"phone_number\":\"(+91) 983 893 3937\",\r\n    \"address\" : \"29, side layout, cohen 09\",\r\n    \"types\": [\"shoe park\",\"shop\"],\r\n    \"website\" : \"http://google.com\",\r\n    \"language\" : \"French-IN\"\r\n}\r\n\r\n"
+						},
+						"url": {
+							"raw": "http://216.10.245.166/maps/api/place/add/json?key= qaclick123",
+							"protocol": "http",
+							"host": [
+								"216",
+								"10",
+								"245",
+								"166"
+							],
+							"path": [
+								"maps",
+								"api",
+								"place",
+								"add",
+								"json"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": " qaclick123"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddPlace_Xml",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/xml"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\r\n<root>\r\n    <location>\r\n        <lat>-38.383494</lat>\r\n        <lng>33.427362</lng>\r\n    </location>\r\n    <accuracy>50</accuracy>\r\n    <name>The Mens store</name>\r\n    <phone_number>(+91) 983 893 3937</phone_number>\r\n    <address>Anna Salai, Chennai</address>\r\n    <types>shoe park</types>\r\n    <types>kadai</types>\r\n    <website>http://google.com</website>\r\n    <language>tamil-IN</language>\r\n</root>\r\n"
+						},
+						"url": {
+							"raw": "http://216.10.245.166/maps/api/place/add/xml?key= qaclick123",
+							"protocol": "http",
+							"host": [
+								"216",
+								"10",
+								"245",
+								"166"
+							],
+							"path": [
+								"maps",
+								"api",
+								"place",
+								"add",
+								"xml"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": " qaclick123"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletePlace_Json",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"place_id\":\"a97c9e2d67d4c284c3cf531460663ce0\"          \r\n}\r\n"
+						},
+						"url": {
+							"raw": "http://216.10.245.166/maps/api/place/delete/json?key=qaclick123",
+							"protocol": "http",
+							"host": [
+								"216",
+								"10",
+								"245",
+								"166"
+							],
+							"path": [
+								"maps",
+								"api",
+								"place",
+								"delete",
+								"json"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "qaclick123"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
